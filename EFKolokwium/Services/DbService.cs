@@ -24,8 +24,10 @@ namespace EFKolokwium.Services
                     .Select(e => new SomeAlbum
                     {
                         AlbumName = e.AlbumName,
-                        PublishDate = e.PublishDate
-                    }).ToListAsync();
+                        PublishDate = e.PublishDate,
+                        //Tracks = e.Tracks.Select(e=>new SomeTrack(){TrackName = e.IdTrack.Name, Duration = e.IdTrack.Duration})
+                    })
+                    .ToListAsync();
             }
         }
 

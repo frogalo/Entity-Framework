@@ -77,7 +77,9 @@ namespace EFKolokwium.Models
 
                 t.HasOne(e => e.Track).WithMany(e => e.MusicianTracks).HasForeignKey(e => e.IdTrack);
                 t.HasOne(e => e.Musician).WithMany(e => e.MusicianTracks).HasForeignKey(e => e.IdMusician);
-
+                //t.HasKey(e => e.IdMusician);
+               // t.HasKey(e => e.IdTrack);
+                
                 t.HasData(
                     new MusicianTrack { IdMusician = 1, IdTrack = 1 },
                     new MusicianTrack { IdMusician = 1, IdTrack = 1 },
